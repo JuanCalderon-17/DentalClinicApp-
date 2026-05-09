@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx -y puppeteer screenshot index.html screenshot.png --fullPage)",
+      "Bash(npx -y puppeteer --help)",
+      "Bash(npm init *)",
+      "Bash(node screenshot.js)",
+      "Bash(start msedge *)",
+      "Bash(git --version)",
+      "Bash(gh --version)",
+      "PowerShell(gh --version)"
+    ]
+  }
+}

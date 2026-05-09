@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>YC Dental - Centro Odontológico de Especialidades</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'brand-cyan': '#1fbde0',
+          'brand-dark': '#00102E',
+          'brand-text': '#233452',
+          'brand-grey': '#6d7685',
+          'brand-light': '#F4F5F7',
+          'brand-border': '#dbdbdb',
+          'brand-body': '#47425d',
+        },
+        fontFamily: {
+          sans: ['Roboto', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+          slab: ['"Roboto Slab"', 'serif'],
+        },
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color:#47425d; line-height:1.68; font-size:16px; background:#fff; }
+  h1,h2,h3,h4 { color:#00102E; }
+  .heading-underline::after{
+    content:"";
+    display:block;
+    width:60px;
+    height:3px;
+    background:#1fbde0;
+    margin:14px auto 0;
+  }
+  .btn-cyan{
+    background:#1fbde0;
+    color:#fff;
+    padding:10px 26px;
+    font-size:13px;
+    letter-spacing:0.5px;
+    font-weight:500;
+    border-radius:2px;
+    display:inline-block;
+    transition:background 0.2s;
+  }
+  .btn-cyan:hover{ background:#19a8c8; }
+  .btn-outline-white{
+    border:1px solid rgba(255,255,255,0.7);
+    color:#fff;
+    padding:18px 36px;
+    font-size:14px;
+    letter-spacing:1px;
+    font-weight:500;
+    display:inline-block;
+    transition:background 0.2s;
+  }
+  .btn-outline-white:hover{ background:rgba(255,255,255,0.1); }
+  .work-caption{ color:#233452; font-size:14px; text-align:center; margin-top:10px; }
+  .review-stars{ color:#fbbf24; letter-spacing:2px; font-size:14px; }
+  .footer-link{ color:#cfd6e0; font-size:14px; }
+  .footer-link:hover{ color:#fff; }
+  .form-input{
+    width:100%;
+    background:#fff;
+    border:none;
+    padding:8px 12px;
+    height:36px;
+    font-size:14px;
+    color:#233452;
+  }
+  .form-textarea{
+    width:100%;
+    background:#fff;
+    border:none;
+    padding:8px 12px;
+    height:120px;
+    font-size:14px;
+    color:#233452;
+    resize:none;
+  }
+  .nav-link-footer{ color:#cfd6e0; font-size:14px; display:block; padding:4px 0; }
+  .nav-link-footer:hover{ color:#fff; }
+  .top-nav-link{ color:#fff; font-size:13px; font-weight:600; padding:0 12px; letter-spacing:0.3px; }
+  .top-nav-link:hover{ color:#1fbde0; }
+
+  /* Fixed background parallax hero — image stays pinned while content scrolls over it */
+  .hero-fixed-bg {
+    background-image: url('https://picsum.photos/seed/dental-hero-real/1920/1200');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  /* iOS Safari fallback (background-attachment: fixed is unreliable on mobile) */
+  @supports (-webkit-touch-callout: none) {
+    .hero-fixed-bg { background-attachment: scroll; }
+  }
+</style>
+</head>
+<body class="bg-white">
+
+<!-- TOP NAV BAR -->
+<header class="bg-[#1d4f9a] text-white relative z-30">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+    <nav class="flex items-center gap-1 text-[13px]">
+      <a href="#" class="top-nav-link">Home</a>
+      <a href="#" class="top-nav-link">Blog</a>
+      <a href="#" class="top-nav-link flex items-center gap-1">Especialidades <span class="text-[10px]">▼</span></a>
+      <a href="#" class="top-nav-link">Contacto</a>
+    </nav>
+    <div class="flex items-center gap-2 text-white font-bold text-[18px]">
+      <span class="text-white text-2xl">⚕</span>
+      <span>YCDental</span>
+      <span class="text-white text-sm ml-1">🔍</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="#" class="bg-[#25D366] hover:bg-[#1ebe57] text-white px-4 py-1.5 text-[12px] font-bold uppercase tracking-wider rounded-sm">IR A WHATSAPP</a>
+      <div class="text-[11px] leading-tight">
+        <p>✉ ycdentalec@gmail.com</p>
+        <p>📞 +593 98 472 7608</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO HEADING (fixed background parallax) -->
+<section class="relative text-center px-6 flex flex-col items-center justify-center hero-fixed-bg" style="min-height:90vh;">
+  <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.55) 100%);"></div>
+  <div class="relative z-10">
+    <h1 class="text-4xl md:text-6xl font-bold text-[#1d4f9a] tracking-wide" style="font-family:'Roboto', sans-serif; letter-spacing:1px;">
+      CENTRO ODONTOLÓGICO DE ESPECIALIDADES
+    </h1>
+    <p class="mt-6 text-[18px] md:text-[20px] text-[#1d4f9a]">
+      Salud y Estética. Todas las especialidades a su alcance.
+    </p>
+    <div class="mt-8">
+      <a href="#" class="btn-cyan uppercase" style="padding:14px 28px; font-size:13px; letter-spacing:1px;">Agenda una cita</a>
+    </div>
+  </div>
+</section>
+
+<!-- ESPECIALIDADES -->
+<section class="pt-20 pb-24 px-6">
+  <h2 class="text-center text-3xl md:text-4xl font-bold text-[#1d4f9a]" style="letter-spacing:0.5px;">
+    Especialidades Odontológicas
+  </h2>
+
+  <div class="max-w-5xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-14">
+    <!-- Odontología General -->
+    <div class="text-center">
+      <h3 class="text-[19px] font-bold heading-underline">Odontología General</h3>
+      <p class="mt-7 text-[14px] text-brand-body leading-[1.7]">
+        Diagnóstico y tratamiento general. Incluye los dientes, el periodonto, la articulación temporomandibular y el sistema neuromuscular, y también las estructuras de la cavidad oral, las glándulas salivales, los labios, las amígdalas y la orofaringe.
+      </p>
+      <a href="#" class="btn-cyan mt-7">Más Información</a>
+    </div>
+    <!-- Ortodoncia -->
+    <div class="text-center">
+      <h3 class="text-[19px] font-bold heading-underline">Ortodoncia</h3>
+      <p class="mt-7 text-[14px] text-brand-body leading-[1.7]">
+        Ortodoncia es una especialidad de la odontología que se encarga de la corrección de los dientes y huesos posicionados incorrectamente, para lograr una mordida correcta y funcional, para un habla correcta, y una sonrisa armoniosa.
+      </p>
+      <a href="#" class="btn-cyan mt-7">Más Información</a>
+    </div>
+    <!-- Cirugía Maxilofacial -->
+    <div class="text-center">
+      <h3 class="text-[19px] font-bold heading-underline">Cirugía Maxilofacial</h3>
+      <p class="mt-7 text-[14px] text-brand-body leading-[1.7]">
+        Tratamiento quirúrgico de enfermedades, heridas y defectos de la boca y la estructura dental (extracción de muelas del juicio y caninos incluidos. Fenestraciones, frenillos bucales, torus maxilares, cirugía periapical, traumas, etc.)
+      </p>
+      <a href="#" class="btn-cyan mt-7">Más Información</a>
+    </div>
+    <!-- Endodoncia -->
+    <div class="text-center">
+      <h3 class="text-[19px] font-bold heading-underline">Endodoncia</h3>
+      <p class="mt-7 text-[14px] text-brand-body leading-[1.7]">
+        La endodoncia consiste en extirpar la pulpa dental y luego rellenar y sellar de la cavidad pulpar con un material inerte, para salvar piezas dentarias severamente dañadas sin necesidad de recurrir a prótesis.
+      </p>
+      <a href="#" class="btn-cyan mt-7">Más Información</a>
+    </div>
+    <!-- Periodoncia -->
+    <div class="text-center">
+      <h3 class="text-[19px] font-bold heading-underline">Periodoncia</h3>
+      <p class="mt-7 text-[14px] text-brand-body leading-[1.7]">
+        La Periodoncia es una especialidad de la odontología que estudia la prevención, diagnóstico y tratamiento de las enfermedades que afectan a las encías, al cemento radicular y al hueso alveolar.
+      </p>
+      <a href="#" class="btn-cyan mt-7">Más Información</a>
+    </div>
+    <!-- Rehabilitación Oral -->
+    <div class="text-center">
+      <h3 class="text-[19px] font-bold heading-underline">Rehabilitación Oral</h3>
+      <p class="mt-7 text-[14px] text-brand-body leading-[1.7]">
+        Diseño, elaboración y adaptación de prótesis dentales, aparatos de ortodoncia removibles, férulas dentales, etc. Cada dispositivo es una obra artesanal, única y personalizada, hecha con los mejores materiales.
+      </p>
+      <a href="#" class="btn-cyan mt-7">Más Información</a>
+    </div>
+    <!-- Implantes - centered with Estética on right -->
+    <div class="text-center md:col-start-1">
+      <h3 class="text-[19px] font-bold heading-underline">Implantes</h3>
+      <p class="mt-7 text-[14px] text-brand-body leading-[1.7]">
+        Los implantes son elementos metálicos que se ubican quirúrgicamente en los huesos maxilares, debajo de las encías. Una vez colocados en el lugar, se puede colocar sobre ellos las coronas o puentes fijos que reemplazarán a las piezas perdidas.
+      </p>
+      <a href="#" class="btn-cyan mt-7">Más Información</a>
+    </div>
+    <!-- Estética -->
+    <div class="text-center md:col-start-2">
+      <h3 class="text-[19px] font-bold heading-underline">Estética</h3>
+      <p class="mt-7 text-[14px] text-brand-body leading-[1.7]">
+        Analizamos labios, encías y dientes para dar soluciones de salud oral que mejoren la armonía cosmética de la sonrisa. Se asocia con otras especialidades para realizar tratamientos como carillas dentales, bichectomía, blanqueamientos dentales, etc.
+      </p>
+      <a href="#" class="btn-cyan mt-7">Más Información</a>
+    </div>
+  </div>
+</section>
+
+<!-- BLUE BANNER -->
+<section class="bg-[#1d4f9a] text-white">
+  <div class="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <p class="text-[11px] tracking-[3px] mb-3 font-medium">YC DENTAL</p>
+      <h2 class="text-white text-3xl md:text-4xl font-extrabold leading-[1.1] mb-9" style="letter-spacing:0.5px;">
+        MÁS DE 10 AÑOS<br>GENERANDO<br>SONRISAS
+      </h2>
+      <a href="#" class="btn-outline-white uppercase">Agendar una cita</a>
+    </div>
+    <div class="flex md:justify-end">
+      <img src="https://picsum.photos/seed/dentist/420/280" alt="Dentista" class="w-full max-w-md object-cover" />
+    </div>
+  </div>
+</section>
+
+<!-- NUESTRO TRABAJO -->
+<section class="pt-20 pb-20 px-6">
+  <h2 class="text-center text-3xl md:text-4xl font-bold text-[#1d4f9a]">Nuestro Trabajo</h2>
+  <p class="text-center text-[13px] text-brand-body mt-6 max-w-2xl mx-auto leading-[1.6]">
+    Una muestra de lo que hacemos y cómo podemos ayudarle a mejorar su salud bucal. ¡No existen imposibles! El caso más complicado en odontología es aquel que no se atiende.
+  </p>
+
+  <div class="max-w-5xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div>
+      <img src="https://picsum.photos/seed/work1/400/300" class="w-full h-[200px] object-cover" />
+      <p class="work-caption">Biomécanica Ortodoncia</p>
+    </div>
+    <div>
+      <img src="https://picsum.photos/seed/work2/400/300" class="w-full h-[200px] object-cover" />
+      <p class="work-caption">Incrustación Cerámica</p>
+    </div>
+    <div>
+      <img src="https://picsum.photos/seed/work3/400/300" class="w-full h-[200px] object-cover" />
+      <p class="work-caption">Blanqueamiento Dental</p>
+    </div>
+    <div>
+      <img src="https://picsum.photos/seed/work4/400/300" class="w-full h-[200px] object-cover" />
+      <p class="work-caption">Limpieza Dental</p>
+    </div>
+    <div>
+      <img src="https://picsum.photos/seed/work5/400/300" class="w-full h-[200px] object-cover" />
+      <p class="work-caption">Restauración resina</p>
+    </div>
+    <div>
+      <img src="https://picsum.photos/seed/work6/400/300" class="w-full h-[200px] object-cover" />
+      <p class="work-caption">Ortodoncia</p>
+    </div>
+    <div>
+      <img src="https://picsum.photos/seed/work7/400/300" class="w-full h-[200px] object-cover" />
+      <p class="work-caption">Corona Disilicato</p>
+    </div>
+    <div>
+      <img src="https://picsum.photos/seed/work8/400/300" class="w-full h-[200px] object-cover" />
+      <p class="work-caption">Ortodoncia Estética</p>
+    </div>
+    <div>
+      <img src="https://picsum.photos/seed/work9/400/300" class="w-full h-[200px] object-cover" />
+      <p class="work-caption">Clareamiento Dental</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="pt-10 pb-24 px-6">
+  <h2 class="text-center text-3xl md:text-4xl font-bold text-[#1d4f9a]">Nuestros Pacientes Opinan</h2>
+  <p class="text-center text-[13px] text-brand-body mt-6 max-w-2xl mx-auto leading-[1.6]">
+    Nuestros pacientes nos han dejado en Google estas calificaciones ⭐⭐⭐⭐⭐.<br>
+    Sus muestras de cariño, y de satisfacción con nuestro servicio, nos comprometen a ser mejores cada día.
+  </p>
+
+  <div class="max-w-5xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+    <button class="hidden md:block absolute -left-6 top-1/2 -translate-y-1/2 text-brand-cyan text-3xl">‹</button>
+    <!-- Review 1 -->
+    <div class="border border-gray-200 p-5 bg-white">
+      <div class="flex items-start justify-between mb-2">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-brand-cyan flex items-center justify-center text-white text-xs font-semibold">YM</div>
+          <div>
+            <p class="text-[14px] font-semibold text-brand-text">Yoleida Molina</p>
+            <p class="text-[11px] text-brand-grey">hace 8 años</p>
+          </div>
+        </div>
+        <div class="text-[20px] font-bold" style="background:linear-gradient(45deg,#4285F4,#EA4335,#FBBC05,#34A853);-webkit-background-clip:text;background-clip:text;color:transparent;">G</div>
+      </div>
+      <div class="review-stars mb-3">★★★★★</div>
+      <p class="text-[13px] text-brand-body leading-[1.6]">Excelentes</p>
+    </div>
+    <!-- Review 2 -->
+    <div class="border border-gray-200 p-5 bg-white">
+      <div class="flex items-start justify-between mb-2">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-brand-cyan flex items-center justify-center text-white text-xs font-semibold">MN</div>
+          <div>
+            <p class="text-[14px] font-semibold text-brand-text">Mereisis Navarro Rodriguez</p>
+            <p class="text-[11px] text-brand-grey">hace 8 años</p>
+          </div>
+        </div>
+        <div class="text-[20px] font-bold" style="background:linear-gradient(45deg,#4285F4,#EA4335,#FBBC05,#34A853);-webkit-background-clip:text;background-clip:text;color:transparent;">G</div>
+      </div>
+      <div class="review-stars mb-3">★★★★★</div>
+      <p class="text-[13px] text-brand-body leading-[1.6]">
+        Lugar de una atención de excelencia. Rápida y precisa. Se lo recomiendo a todos el que desees una atención personalizada.
+      </p>
+    </div>
+    <!-- Review 3 -->
+    <div class="border border-gray-200 p-5 bg-white">
+      <div class="flex items-start justify-between mb-2">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-brand-cyan flex items-center justify-center text-white text-xs font-semibold">YM</div>
+          <div>
+            <p class="text-[14px] font-semibold text-brand-text">Yamila Morgado</p>
+            <p class="text-[11px] text-brand-grey">hace 8 años</p>
+          </div>
+        </div>
+        <div class="text-[20px] font-bold" style="background:linear-gradient(45deg,#4285F4,#EA4335,#FBBC05,#34A853);-webkit-background-clip:text;background-clip:text;color:transparent;">G</div>
+      </div>
+      <div class="review-stars mb-3">★★★★★</div>
+      <p class="text-[13px] text-brand-body leading-[1.6]">
+        Lo recomiendo como centro de referencia pues está representado por un grupo de especialistas muy profesional. Como paciente he recibido atención de excelenc...
+      </p>
+      <a href="#" class="text-[12px] text-brand-grey mt-2 inline-block">Leer más</a>
+    </div>
+    <button class="hidden md:block absolute -right-6 top-1/2 -translate-y-1/2 text-brand-cyan text-3xl">›</button>
+  </div>
+</section>
+
+<!-- AGENDE CTA -->
+<section class="pt-10 pb-20 px-6">
+  <h2 class="text-center text-3xl md:text-4xl font-bold text-[#1d4f9a]" style="letter-spacing:0.5px;">
+    Agende una cita ¡Y compruébelo!
+  </h2>
+  <div class="text-center mt-10">
+    <a href="#" class="btn-cyan uppercase">Agendar Cita</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#00102E] text-[#cfd6e0] pt-14 pb-6 px-6">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+    <!-- Horarios + Navegación -->
+    <div>
+      <h4 class="text-white font-bold text-[18px] mb-5">Horarios de Atención</h4>
+      <p class="text-[14px] mb-1">De lunes a sábados, de 9:00 AM a 6:00 PM</p>
+      <p class="text-[14px]">Atención previa cita</p>
+
+      <h4 class="text-white font-bold text-[18px] mt-10 mb-4">NAVEGACIÓN</h4>
+      <a href="#" class="nav-link-footer">Home</a>
+      <a href="#" class="nav-link-footer">Blog</a>
+      <a href="#" class="nav-link-footer">Especialidades</a>
+      <a href="#" class="nav-link-footer">Rehabilitación Oral</a>
+      <a href="#" class="nav-link-footer">Estética Dental</a>
+      <a href="#" class="nav-link-footer">Periodoncia</a>
+      <a href="#" class="nav-link-footer">Implantes Dentales</a>
+      <a href="#" class="nav-link-footer">Endodoncia</a>
+      <a href="#" class="nav-link-footer">Cirugía Maxilofacial</a>
+      <a href="#" class="nav-link-footer">Ortodoncia</a>
+      <a href="#" class="nav-link-footer">Odontología General</a>
+      <a href="#" class="nav-link-footer">Contacto</a>
+    </div>
+
+    <!-- Estamos Aquí -->
+    <div>
+      <h4 class="text-white font-bold text-[18px] mb-5">Estamos Aquí</h4>
+      <p class="text-[14px] mb-1">Edificio Trade Building, Torre B, Piso C.</p>
+      <p class="text-[14px] mb-5">Consultorio 722C</p>
+      <img src="https://picsum.photos/seed/map1/400/200" alt="Mapa" class="w-full h-[200px] object-cover bg-gray-300" />
+    </div>
+
+    <!-- Contacto -->
+    <div>
+      <h4 class="text-white font-bold text-[18px] mb-5">Contacto</h4>
+      <label class="text-[13px] block mb-2">Su nombre</label>
+      <input type="text" class="form-input mb-3" />
+      <label class="text-[13px] block mb-2">Su correo electrónico</label>
+      <input type="email" class="form-input mb-3" />
+      <label class="text-[13px] block mb-2">Su teléfono</label>
+      <input type="tel" class="form-input mb-3" />
+      <label class="text-[13px] block mb-2">Asunto</label>
+      <input type="text" class="form-input mb-3" />
+      <label class="text-[13px] block mb-2">Su mensaje (opcional)</label>
+      <textarea class="form-textarea mb-4"></textarea>
+      <div class="text-right">
+        <button class="btn-cyan uppercase" style="padding:8px 28px;">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- bottom copyright -->
+  <div class="max-w-6xl mx-auto mt-12 pt-4 text-[12px] text-[#9aa3b3]">
+    <p>© 2026 YC Dental.</p>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="#" class="fixed bottom-5 left-5 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg z-50">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7 fill-white">
+    <path d="M3.516 3.516c4.686-4.686 12.284-4.686 16.97 0s4.686 12.283 0 16.97a12 12 0 0 1-13.754 2.299l-5.814.735a.392.392 0 0 1-.438-.44l.748-5.788A12 12 0 0 1 3.517 3.517zm3.61 17.043.3.158a9.85 9.85 0 0 0 11.534-1.758c3.843-3.843 3.843-10.074 0-13.918s-10.075-3.843-13.918 0a9.85 9.85 0 0 0-1.747 11.554l.16.303-.51 3.942a.196.196 0 0 0 .219.22zm6.534-7.003-.933 1.164a9.84 9.84 0 0 1-3.497-3.495l1.166-.933a.79.79 0 0 0 .23-.94L9.561 6.96a.79.79 0 0 0-.924-.445l-2.023.524a.797.797 0 0 0-.588.88 11.754 11.754 0 0 0 10.005 10.005.797.797 0 0 0 .88-.587l.525-2.023a.79.79 0 0 0-.445-.923L14.6 13.327a.79.79 0 0 0-.94.23z"/>
+  </svg>
+</a>
+
+</body>
+</html>
